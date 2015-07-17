@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X1d-tF-JWA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="UgE-h8-pVG">
+            <objects>
+                <viewController id="X1d-tF-JWA" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rmO-Mk-5Hu"/>
+                        <viewControllerLayoutGuide type="bottom" id="nUQ-Q3-kqx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aj1-Tg-MCc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="aLj-72-1q4" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="lV3-jj-rkI"/>
+                        <segue destination="E9j-p3-mjh" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="EjV-QK-S5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJv-Yh-Fxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1371" y="584"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="PruebaSlideMenuWithLibrary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +38,99 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lS1-MY-rGg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1146" y="142"/>
+        </scene>
+        <!--Segundo View Controller-->
+        <scene sceneID="bQl-2I-FaK">
+            <objects>
+                <viewController storyboardIdentifier="SegundoViewController" id="fSf-TC-T0X" customClass="SegundoViewController" customModule="PruebaSlideMenuWithLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z8y-fe-0W3"/>
+                        <viewControllerLayoutGuide type="bottom" id="KrZ-IL-yoq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="chj-FB-QQP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3pS-ih-c5R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rj-eX-K84" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cy1-bt-GjR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E9j-p3-mjh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sKW-vM-wMN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="3Ya-ib-OpA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XN3-Gm-rds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="142"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="Zn3-Wx-i0C">
+            <objects>
+                <viewController id="aLj-72-1q4" customClass="MenuViewController" customModule="PruebaSlideMenuWithLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tej-b4-fqu"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jo-cF-AQC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U4g-oC-DMu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PFg-63-cka">
+                                <rect key="frame" x="33" y="20" width="535" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6jo-cF-AQC" firstAttribute="top" secondItem="PFg-63-cka" secondAttribute="bottom" constant="20" id="JyP-uE-bNc"/>
+                            <constraint firstItem="PFg-63-cka" firstAttribute="leading" secondItem="U4g-oC-DMu" secondAttribute="leadingMargin" constant="17" id="djQ-Tu-xnJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PFg-63-cka" secondAttribute="trailing" constant="16" id="fgj-2z-BEB"/>
+                            <constraint firstItem="PFg-63-cka" firstAttribute="top" secondItem="tej-b4-fqu" secondAttribute="bottom" id="s3l-Gp-2dS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOpciones" destination="PFg-63-cka" id="7wM-Zc-N8d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1f-ZW-WMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-457" y="1028"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U4V-kg-rkn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hwQ-v8-HMf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0AR-dT-Fd7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fSf-TC-T0X" kind="relationship" relationship="rootViewController" id="EIA-VB-rne"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DrV-48-C45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="847"/>
         </scene>
     </scenes>
 </document>

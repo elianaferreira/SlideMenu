@@ -13,6 +13,9 @@
 		C28A72061B57EA3F00834FBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28A72051B57EA3F00834FBD /* Images.xcassets */; };
 		C28A72091B57EA3F00834FBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28A72071B57EA3F00834FBD /* LaunchScreen.xib */; };
 		C28A72151B57EA3F00834FBD /* PruebaSlideMenuWithLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A72141B57EA3F00834FBD /* PruebaSlideMenuWithLibraryTests.swift */; };
+		C28A721F1B57ED1800834FBD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A721E1B57ED1800834FBD /* MenuViewController.swift */; };
+		C28A72211B57ED6000834FBD /* SegundoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A72201B57ED6000834FBD /* SegundoViewController.swift */; };
+		C28A72261B57EE3C00834FBD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A72251B57EE3C00834FBD /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,11 @@
 		C28A720E1B57EA3F00834FBD /* PruebaSlideMenuWithLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaSlideMenuWithLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28A72131B57EA3F00834FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28A72141B57EA3F00834FBD /* PruebaSlideMenuWithLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaSlideMenuWithLibraryTests.swift; sourceTree = "<group>"; };
+		C28A721E1B57ED1800834FBD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C28A72201B57ED6000834FBD /* SegundoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegundoViewController.swift; sourceTree = "<group>"; };
+		C28A72231B57EE3C00834FBD /* PruebaSlideMenuWithLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PruebaSlideMenuWithLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
+		C28A72241B57EE3C00834FBD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C28A72251B57EE3C00834FBD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +85,15 @@
 		C28A71FB1B57EA3F00834FBD /* PruebaSlideMenuWithLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				C28A72221B57EDDA00834FBD /* SWRevealViewController */,
 				C28A71FE1B57EA3F00834FBD /* AppDelegate.swift */,
 				C28A72001B57EA3F00834FBD /* ViewController.swift */,
 				C28A72021B57EA3F00834FBD /* Main.storyboard */,
 				C28A72051B57EA3F00834FBD /* Images.xcassets */,
 				C28A72071B57EA3F00834FBD /* LaunchScreen.xib */,
 				C28A71FC1B57EA3F00834FBD /* Supporting Files */,
+				C28A721E1B57ED1800834FBD /* MenuViewController.swift */,
+				C28A72201B57ED6000834FBD /* SegundoViewController.swift */,
 			);
 			path = PruebaSlideMenuWithLibrary;
 			sourceTree = "<group>";
@@ -110,6 +121,16 @@
 				C28A72131B57EA3F00834FBD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C28A72221B57EDDA00834FBD /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C28A72241B57EE3C00834FBD /* SWRevealViewController.h */,
+				C28A72251B57EE3C00834FBD /* SWRevealViewController.m */,
+				C28A72231B57EE3C00834FBD /* PruebaSlideMenuWithLibrary-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28A72011B57EA3F00834FBD /* ViewController.swift in Sources */,
+				C28A721F1B57ED1800834FBD /* MenuViewController.swift in Sources */,
+				C28A72261B57EE3C00834FBD /* SWRevealViewController.m in Sources */,
+				C28A72211B57ED6000834FBD /* SegundoViewController.swift in Sources */,
 				C28A71FF1B57EA3F00834FBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +364,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PruebaSlideMenuWithLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PruebaSlideMenuWithLibrary/PruebaSlideMenuWithLibrary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +377,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PruebaSlideMenuWithLibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PruebaSlideMenuWithLibrary/PruebaSlideMenuWithLibrary-Bridging-Header.h";
 			};
 			name = Release;
 		};
